@@ -36,3 +36,29 @@ AFRAME.registerComponent("rotate-with-camera", {
   })()
 })
 
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+      document.getElementById("player").setAttribute("animation-mixer","clip","*")
+  }
+    else if (e.keyCode == '40') {
+      document.getElementById("player").setAttribute("animation-mixer","clip","*")
+    }
+    else if (e.keyCode == '37') {
+      document.getElementById("player").setAttribute("animation-mixer","clip","*")
+    }
+    else if (e.keyCode == '39') {
+      document.getElementById("player").setAttribute("animation-mixer","clip","*")
+    }
+
+}
+document.onkeyup = checkKeyUp;
+
+function checkKeyUp(e) {
+  document.getElementById("player").setAttribute("animation-mixer","clip","Idle")
+}
+
