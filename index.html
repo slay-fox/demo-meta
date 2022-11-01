@@ -8,6 +8,7 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.js"></script>
     <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
     <script src="./jsFile.js" ></script>
 </head>
 <body>
@@ -15,15 +16,22 @@
         <a-asset>
             <a-asset-item id="avatar" src="./robo.glb"></a-asset-item>
         </a-asset>
-        <a-entity gltf-model="./room.glb"scale="5 3 5" rotation="0 0 0"></a-entity>
+        <a-entity environment="preset: starry;"></a-entity>
+        <a-entity light="type: ambient"></a-entity>
+        <a-sound src="src: url(audio.mp3)" autoplay="true" loop="true"position="0 2 0"></a-sound>
+        <a-sphere position="0 6 6" src="./1.png" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-sphere>
+        <a-sphere position="0 6 -6" src="./2.png" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-sphere>
+        <a-sphere position="6 6 0" src="./3.jpg" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-sphere>
+        <a-sphere position="-6 6 0" src="./4.png" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-sphere>
+        <a-entity gltf-model="./computer_and_laptop.glb" scale="0.1 0.1 0.1" rotation="0 0 0" position="0 1.98 0"></a-entity>
+        <a-entity gltf-model="./room.glb"scale="5 3 5" rotation="0 0 0" position="0 2 0"></a-entity>
         <!-- camera "rig" -->
-        <a-entity movement-controls="constrainToNavMesh: true;" follow-box="target: #player" look-controls>
-          <a-entity camera position="0 1.6 2"></a-entity>
+        <a-entity follow-box="target: #player" look-controls>
+          <a-entity camera position="0 2.6 2"></a-entity>
         </a-entity>
-        <
-<a-entity gltf-model="./navmesh.glb"  position="0 0 -4"scale="0.7 1 0.6"></a-entity>
+
         <!-- the "player" -->
-        <a-entity  id="player" gltf-model="#avatar"  scale="0.5 0.5 0.5"  wasd-controls="speed: 35" rotate-with-camera
+        <a-entity  id="player" gltf-model="#avatar"  scale="0.5 0.5 0.5" position="0 2 25" wasd-controls="speed: 35" rotate-with-camera
         animation-mixer="clip:Idle"  ></a-entity>
        
       </a-scene>
