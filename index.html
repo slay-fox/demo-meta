@@ -16,15 +16,23 @@
         <a-asset>
             <a-asset-item id="avatar" src="./robo.glb"></a-asset-item>
         </a-asset>
-        <a-entity environment="preset: starry;"></a-entity>
-        <a-entity light="type: ambient;intensity:2"></a-entity>
-        <a-sound src="src: url(audio.mp3)" autoplay="true" loop="true"position="0 2 0"></a-sound>
-        <a-sphere position="0 13 10" src="./1.png" radius="2" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-sphere>
-        <a-sphere position="0 13 -10" src="./2.png" radius="2" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-sphere>
-        <a-sphere position="10 13 0" src="./3.jpg" radius="2" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-sphere>
-        <a-sphere position="-10 13 0" src="./4.png" radius="2" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-sphere>
-        <a-entity gltf-model="./computer_and_laptop.glb" scale="0.1 0.1 0.1" rotation="0 0 0" position="0 1.98 0"></a-entity>
-        <a-entity gltf-model="./room.glb"scale="5 3 5" rotation="0 0 0" position="0 2 0"></a-entity>
+        <a-entity environment="preset: starry;grid:'none;groundTexture:walkernoise;"></a-entity>
+        <a-entity light="type: ambient;intensity:1"></a-entity>
+        <!-- <a-sound src="src: url(audio.mp3)" autoplay="true" loop="true"position="0 2 0"></a-sound> -->
+        <a-sphere position="0 6 5" src="./1.png" radius="1" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-sphere>
+        <a-sphere position="-6 6 3" src="./3.jpg" radius="1" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-sphere>
+        <a-entity gltf-model="./spaceboi.glb" scale="1 1 1" rotation="0 0 0" position="0 0 3.5"></a-entity>
+        <a-entity gltf-model="./stage.glb"scale="3 3 3" rotation="0 50 0" position="-39 0 -39"></a-entity>
+        <a-entity gltf-model="./vr_headset_controller.glb"scale="3 3 3" rotation="0 0 0" position="-39 0 -39"></a-entity>
+        <a-box width="3" height="3" depth="3" src="./html.jpg" position="-27.5 4.4 5"rotation="0 0 35"></a-box>
+        <a-box width="3" height="3" depth="3" src="./js.jpg" position="-29.8 1.5 5"rotation="0 -17 0"></a-box>
+        <a-box width="3" height="3" depth="3" src="./2.png" position="-25.5 1.5 5"rotation="0 22 0"></a-box>
+        <a-box width="3" height="3" depth="3" src="./css.jpg" position="-33.9 2.5 5"rotation="18 12 -55"></a-box>
+        <a-entity gltf-model="./degree.glb"scale="3 3 3" rotation="0 180 0" position="90 -30 -20"animation-mixer="clip:*"></a-entity>
+        <a-entity gltf-model="./flag.glb"scale="3 3 3" rotation="0 180 0" position="80 -30 -25"animation-mixer="clip:*"></a-entity>
+        <a-entity gltf-model="./metacert.glb"scale="3 3 3" rotation="0 180 0" position="70 -30 -30"animation-mixer="clip:*"></a-entity>
+        <a-entity gltf-model="./frontend.glb"scale="3 3 3" rotation="0 180 0" position="60 -30 -35"animation-mixer="clip:*"></a-entity>
+        <a-text value="Ajai S S"position="-63 25 -50"rotation="0 50 0"scale="20 20 20"></a-text>
         <!-- camera "rig" -->
         <a-entity follow-box="target: #player" look-controls>
           <a-entity camera position="0 2.6 2"></a-entity>
