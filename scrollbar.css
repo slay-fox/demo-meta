@@ -1,0 +1,59 @@
+        /* Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #ff8903 #DFE9EB;
+        }
+
+        /* Chrome, Edge and Safari */
+        *::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        *::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background-color: #DFE9EB;
+        }
+
+        *::-webkit-scrollbar-track:hover {
+            background-color: #B8C0C2;
+        }
+
+        *::-webkit-scrollbar-track:active {
+            background-color: #B8C0C2;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: #b76200;
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+            background-color: #ff8903;
+        }
+
+        *::-webkit-scrollbar-thumb:active {
+            background-color: #f9a341;
+        }
+
+
+        .cursor {
+            position: absolute;
+            border-radius: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 3;
+            pointer-events: none;
+          }
+          
+          .cursor:nth-child(1) {
+            height: 10px;
+            width: 10px;
+            background-color: #ff8903;
+          }
+          
+          .cursor:nth-child(2) {
+            height: 35px;
+            width: 35px;
+            border: 2px solid white;
+          }
+
+          
